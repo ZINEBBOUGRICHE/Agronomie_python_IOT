@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+  <meta name="description" content="Fertilizer Prediction">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href="{{ url_for('static',filename='login2_js.js') }}" rel="stylesheet" media="screen">
+  <script type="text/javascript" href="{{ url_for('static',filename='bootstrap.min.js') }}" rel="stylesheet" media="screen"> </script>
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/login2_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/index_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/indexstyle.css') }}" rel="stylesheet" media="screen">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse  navbar-fixed-top" >
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/index">L'agriculture de précision</a>
+      </div>
+
+
+   </nav>
+   </div>
+
+
+
+<div class="container-fluid">
+  {% if crop=="Epinards" %}
+  <div class="well container-fluid">
+   <center>
+     <img src="{{url_for('static', filename='Epinards.jpg')}}" class="img-rounded" width="304" height="236">
+     <h2>Epinards  </h2>
+     <table  class="table table-hover">
+       <thead>
+       </tr  class="Warning">
+         <th>Etape</th>
+         <th>dose</th>
+       </tr>
+     </thead>
+       {% for key, value in result[0].items() %}
+           <tr class="success">
+             <td> {{ key }} </th>
+             <td> {{ value }}  m3/jour*hectare</td>
+           </tr>
+       {% endfor %}
+       <table>
+   </center>
+ 
+ 
+ </div>
+ 
+ 
+ {% endif %}
+  {% if crop=="Betterave" %}
+  <div class="well container-fluid">
+   <center>
+     <img src="{{url_for('static', filename='Betterave.jpg')}}" class="img-rounded" width="304" height="236">
+     <h2>Betterave  </h2>
+     <table  class="table table-hover">
+       <thead>
+       </tr  class="Warning">
+         <th>Etape</th>
+         <th>dose</th>
+       </tr>
+     </thead>
+       {% for key, value in result[0].items() %}
+           <tr class="success">
+             <td> {{ key }} </th>
+             <td> {{ value }}  m3/jour*hectare</td>
+           </tr>
+       {% endfor %}
+       <table>
+   </center>
+ 
+ 
+ </div>
+ 
+ 
+ {% endif %}
+  {% if crop=="Poireaux" %}
+  <div class="well container-fluid">
+   <center>
+     <img src="{{url_for('static', filename='Poireaux.jpg')}}" class="img-rounded" width="304" height="236">
+     <h2>Poireaux  </h2>
+     <table  class="table table-hover">
+       <thead>
+       </tr  class="Warning">
+         <th>Etape</th>
+         <th>dose</th>
+       </tr>
+     </thead>
+       {% for key, value in result[0].items() %}
+           <tr class="success">
+             <td> {{ key }} </th>
+             <td> {{ value }}  m3/jour*hectare</td>
+           </tr>
+       {% endfor %}
+       <table>
+   </center>
+ 
+ 
+ </div>
+ 
+ 
+ {% endif %}
+  {% if crop=="Poivron" %}
+  <div class="well container-fluid">
+   <center>
+     <img src="{{url_for('static', filename='Poivron.jpg')}}" class="img-rounded" width="304" height="236">
+     <h2>Poivron  </h2>
+     <table  class="table table-hover">
+       <thead>
+       </tr  class="Warning">
+         <th>Etape</th>
+         <th>dose</th>
+       </tr>
+     </thead>
+       {% for key, value in result[0].items() %}
+           <tr class="success">
+             <td> {{ key }} </th>
+             <td> {{ value }}  m3/jour*hectare</td>
+           </tr>
+       {% endfor %}
+       <table>
+   </center>
+ 
+ 
+ </div>
+ 
+ 
+ {% endif %}
+
+  {% if crop=="Carotte" %}
+  <div class="well container-fluid">
+   <center>
+     <img src="{{url_for('static', filename='carotte.jpg')}}" class="img-rounded" width="304" height="236">
+     <h2>Carotte  </h2>
+     <table  class="table table-hover">
+       <thead>
+       </tr  class="Warning">
+         <th>Etape</th>
+         <th>dose</th>
+       </tr>
+     </thead>
+       {% for key, value in result[0].items() %}
+           <tr class="success">
+             <td> {{ key }} </th>
+             <td> {{ value }}  m3/jour*hectare</td>
+           </tr>
+       {% endfor %}
+       <table>
+   </center>
+ 
+ 
+ </div>
+ 
+ 
+ {% endif %}
+
+{% if crop=="TOMATO" %}
+ <div class="well container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='tomato.jpg')}}" class="img-rounded" width="304" height="236">
+    <h2>Tomato  </h2>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+
+
+</div>
+
+
+{% endif %}
+
+
+{% if crop=="GARLIC" %}
+
+<div class="container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h1> Garlic  </h1>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+
+
+</div>
+{% endif%}
+
+{% if crop=="ONION" %}
+  <div class="container-fluid">
+    <center>
+      <img src="{{url_for('static', filename='onion.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+      <h1><strong>Onions</strong>  </h1>
+      <table  class="table table-hover">
+        <thead>
+        </tr  class="Warning">
+          <th>Etape</th>
+          <th>dose</th>
+        </tr>
+      </thead>
+        {% for key, value in result[0].items() %}
+            <tr class="success">
+              <td> {{ key }} </th>
+              <td> {{ value }}  m3/jour*hectare</td>
+            </tr>
+        {% endfor %}
+        <table>
+    </center>
+  </div>
+
+  {% endif %}
+
+
+
+{% if crop=="ORANGE" %}
+<div class="container-fluid">
+<center>
+      <img src="{{url_for('static', filename='orange.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+      <h2><strong>Orange </strong> </h2>
+      <table  class="table table-hover">
+        <thead>
+        </tr  class="Warning">
+          <th>Etape</th>
+          <th>dose</th>
+        </tr>
+      </thead>
+        {% for key, value in result[0].items() %}
+            <tr class="success">
+              <td> {{ key }} </th>
+              <td> {{ value }}  m3/jour*hectare</td>
+            </tr>
+        {% endfor %}
+        <table>
+    </center>
+</div>
+  {% endif %}
+
+  {% if crop=="PEAS" %}
+<div class="container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='peas.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2><strong>Peas</strong> </h2>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+
+</div>
+
+  {% endif %}
+  {% if crop=="POTATO" %}
+  <div class="well container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='potato.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>Potato  </h2>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+
+</div>
+  {% endif %}
+  {% if crop=="RICE" %}
+  <div class="container-fluid well">
+  <center>
+    <img src="{{url_for('static', filename='rice.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>RICE  </h2>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+</div>>
+  {% endif %}
+
+
+  {% if crop=="SUGARCANE" %}
+  <div class="container-fluid well">
+
+  <center>
+    <img src="{{url_for('static', filename='sugarcane.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>Sugarcane  </h2>
+    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[0].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+  </center>
+
+  </div>
+
+  {% endif %}
+
+<!-- <div class="container footer"><i class="fa fa-copyright pull-center" aria-hidden="true" style="margin:3px"></i>NONE</div> -->
+{% if crop1==13 %}
+<div class="well"><h3>2.Epinards</h3>
+      <img src="{{url_for('static', filename='Betterave.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==12 %}
+<div class="well"><h3>2.Betterave</h3>
+      <img src="{{url_for('static', filename='Betterave.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==11 %}
+<div class="well"><h3>2.Poireaux</h3>
+      <img src="{{url_for('static', filename='Poireaux.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==10 %}
+<div class="well"><h3>2.Poivron</h3>
+      <img src="{{url_for('static', filename='Poivron.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==9 %}
+<div class="well"><h3>2.Carotte</h3>
+      <img src="{{url_for('static', filename='Carotte.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==1 %}
+<div class="well"><h3>2.GARLIC</h3>
+      <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==2 %}
+<div class="well"><h3>2.ONION </h3>
+      <img src="{{url_for('static', filename='onion.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==3 %}
+<div class="well"><h3>2.ORANGE </h3>
+      <img src="{{url_for('static', filename='orange.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==4 %}
+<div class="well"><h3>2.PEAS </h3>
+    <img src="{{url_for('static', filename='peas.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==5 %}
+<div class="well"><h3>2.POTATO </h3>
+    <img src="{{url_for('static', filename='potato.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==6 %}
+<div class="well"><h3>2.RICE </h3>
+    <img src="{{url_for('static', filename='rice.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==7 %}
+<div class="well"><h3>2.TOMATO </h3>
+            <img src="{{url_for('static', filename='tomato.jpg')}}" class="img-rounded" width="304" height="236">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop1==8 %}
+<div class="well"><h3>2.SUGARCANE </h3>
+    <img src="{{url_for('static', filename='sugarcane.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[1].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+
+{% if crop2==1 %}
+<div class="well"><h3>3.GARLIC  </h3>
+    <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+
+{% if crop2==2 %}
+<div class="well"><h3>3.ONION  </h3>
+      <img src="{{url_for('static', filename='onion.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==3 %}
+<div class="well"><h3>3.ORANGE  </h3>
+      <img src="{{url_for('static', filename='orange.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==4 %}
+<div class="well"><h3>3.PEAS  </h3>
+    <img src="{{url_for('static', filename='peas.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==5 %}
+<div class="well"><h3>3.POTATO  </h3>
+    <img src="{{url_for('static', filename='potato.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>      <table>
+</div>
+{% endif %}
+{% if crop2==6 %}
+<div class="well"><h3>3.RICE  </h3>
+    <img src="{{url_for('static', filename='rice.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==7 %}
+<div class="well"><h3>3.TOMATO  </h3>
+    <img src="{{url_for('static', filename='tomato.jpg')}}" class="img-rounded" width="304" height="236">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==8 %}
+<div class="well"><h3>3.SUGARCANE  </h3>
+    <img src="{{url_for('static', filename='sugarcane.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==9 %}
+<div class="well"><h3>3.Carotte  </h3>
+    <img src="{{url_for('static', filename='Carotte.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==10 %}
+<div class="well"><h3>3.Poivron  </h3>
+    <img src="{{url_for('static', filename='Poivron.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==11 %}
+<div class="well"><h3>3.Poireaux  </h3>
+    <img src="{{url_for('static', filename='Poireaux.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==12 %}
+<div class="well"><h3>3.Betterave  </h3>
+    <img src="{{url_for('static', filename='Betterave.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+{% if crop2==13 %}
+<div class="well"><h3>3.Epinards  </h3>
+    <img src="{{url_for('static', filename='Epinards.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+
+	    <table  class="table table-hover">
+      <thead>
+      </tr  class="Warning">
+        <th>Etape</th>
+        <th>dose</th>
+      </tr>
+    </thead>
+      {% for key, value in result[2].items() %}
+          <tr class="success">
+            <td> {{ key }} </th>
+            <td> {{ value }}  m3/jour*hectare</td>
+          </tr>
+      {% endfor %}
+      <table>
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
